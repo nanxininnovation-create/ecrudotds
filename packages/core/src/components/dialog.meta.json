@@ -1,0 +1,33 @@
+{
+  "name": "dialog",
+  "title": "Dialog",
+  "description": "A modal dialog built on Radix UI Dialog. Handles focus trap, scroll lock, and ARIA automatically.",
+  "category": "overlay",
+  "tags": ["modal", "overlay", "dialog"],
+  "status": "stable",
+  "a11y": [
+    "Focus is automatically trapped inside the dialog when open.",
+    "Pressing Escape closes the dialog.",
+    "DialogTitle is required — it is the accessible name of the dialog.",
+    "DialogDescription is recommended — describes the dialog purpose for screen reader users."
+  ],
+  "usage": {
+    "do": [
+      "Always include DialogTitle.",
+      "Put destructive actions (delete, remove) in a dialog to confirm intent."
+    ],
+    "dont": [
+      "Don't open a dialog from inside another dialog — use a drawer or step flow instead.",
+      "Don't use dialogs for simple notifications — use a toast."
+    ]
+  },
+  "examples": [
+    {
+      "name": "default",
+      "code": "<Dialog><DialogTrigger asChild><Button>Open</Button></DialogTrigger><DialogContent><DialogHeader><DialogTitle>Are you sure?</DialogTitle><DialogDescription>This action cannot be undone.</DialogDescription></DialogHeader><DialogFooter><Button variant=\"danger\">Confirm</Button></DialogFooter></DialogContent></Dialog>"
+    }
+  ],
+  "dependencies": ["@radix-ui/react-dialog"],
+  "registryDependencies": ["button"],
+  "files": [{ "path": "src/components/dialog.tsx", "type": "registry:ui" }]
+}

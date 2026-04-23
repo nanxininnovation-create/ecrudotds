@@ -1,0 +1,24 @@
+{
+  "name": "input",
+  "title": "Input",
+  "description": "A single-line text input. Supports all native input types.",
+  "category": "form",
+  "tags": ["form", "text", "field"],
+  "status": "stable",
+  "a11y": [
+    "Always associate with a <label> via htmlFor / id.",
+    "Use aria-describedby to link helper text or error messages.",
+    "aria-invalid=\"true\" when the field has a validation error."
+  ],
+  "usage": {
+    "do": ["Pair with a visible <label>.", "Use placeholder only as a hint, not as a label substitute."],
+    "dont": ["Don't rely on placeholder text to convey required information."]
+  },
+  "examples": [
+    { "name": "default", "code": "<Input placeholder=\"Email\" type=\"email\" />" },
+    { "name": "disabled", "code": "<Input disabled placeholder=\"Disabled\" />" }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [{ "path": "src/components/input.tsx", "type": "registry:ui" }]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "card",
+  "title": "Card",
+  "description": "A surface container with header, content, and footer slots.",
+  "category": "layout",
+  "tags": ["container", "surface", "layout"],
+  "status": "stable",
+  "a11y": [
+    "Cards are divs — add a role if needed (e.g. role=\"article\" for standalone content cards).",
+    "CardTitle renders an h3 — adjust heading level to fit the document outline."
+  ],
+  "usage": {
+    "do": ["Use Card to group related content on a surface.", "Use CardFooter for primary actions related to the card."],
+    "dont": ["Don't nest cards more than one level deep."]
+  },
+  "examples": [
+    {
+      "name": "default",
+      "code": "<Card><CardHeader><CardTitle>Title</CardTitle><CardDescription>Description</CardDescription></CardHeader><CardContent>Content</CardContent><CardFooter><Button>Action</Button></CardFooter></Card>"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [{ "path": "src/components/card.tsx", "type": "registry:ui" }]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "dropdown-menu",
+  "title": "Dropdown Menu",
+  "description": "A contextual menu triggered by a button. Supports items, checkboxes, radio groups, separators, and sub-menus.",
+  "category": "overlay",
+  "tags": ["menu", "dropdown", "context", "navigation"],
+  "status": "stable",
+  "a11y": [
+    "The trigger must have an accessible label.",
+    "Arrow keys navigate menu items; Escape closes the menu.",
+    "All keyboard interactions are handled by Radix UI."
+  ],
+  "usage": {
+    "do": [
+      "Use for actions contextual to a specific item (e.g. row actions in a table).",
+      "Keep menus short — more than 7 items should be reconsidered as a different pattern."
+    ],
+    "dont": [
+      "Don't use a dropdown menu as a select input — use a Select component instead.",
+      "Don't put destructive actions as the first item — place them last, separated."
+    ]
+  },
+  "examples": [
+    {
+      "name": "default",
+      "code": "<DropdownMenu><DropdownMenuTrigger asChild><Button variant=\"outline\">Options</Button></DropdownMenuTrigger><DropdownMenuContent><DropdownMenuItem>Edit</DropdownMenuItem><DropdownMenuItem>Duplicate</DropdownMenuItem><DropdownMenuSeparator /><DropdownMenuItem>Delete</DropdownMenuItem></DropdownMenuContent></DropdownMenu>"
+    }
+  ],
+  "dependencies": ["@radix-ui/react-dropdown-menu"],
+  "registryDependencies": ["button"],
+  "files": [{ "path": "src/components/dropdown-menu.tsx", "type": "registry:ui" }]
+}
