@@ -1,0 +1,4 @@
+{
+  "extends": "@ecru/tsconfig/base.json",
+  "include": ["src"]
+}

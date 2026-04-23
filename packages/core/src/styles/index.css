@@ -1,0 +1,58 @@
+/* Ecru core styles — imports Tailwind + generated tokens.
+ * Apps should import this file once. Monorepo @source globs live here so
+ * Tailwind v4 picks up every component without each app repeating them.
+ */
+
+@import "tailwindcss";
+@import "@ecru/tokens/theme.css";
+
+/* Tell Tailwind v4 where to find utility usages across the workspace.
+ * Apps that consume @ecru/core get this automatically because styles.css
+ * is imported from this package. */
+@source "../../../core/src/**/*.{ts,tsx}";
+@source "../../../blocks/src/**/*.{ts,tsx}";
+
+/* Map Tailwind's semantic color utilities to our brand CSS variables.
+ * After this, utilities like `bg-surface`, `text-fg`, `border-border`
+ * resolve to the active brand+mode tokens. */
+@theme inline {
+  --color-canvas: var(--color-bg-canvas);
+  --color-surface: var(--color-bg-surface);
+  --color-subtle: var(--color-bg-subtle);
+  --color-muted: var(--color-bg-muted);
+  --color-inverse: var(--color-bg-inverse);
+
+  --color-fg: var(--color-fg-default);
+  --color-fg-muted: var(--color-fg-muted);
+  --color-fg-subtle: var(--color-fg-subtle);
+  --color-fg-on-accent: var(--color-fg-onAccent);
+  --color-fg-inverse: var(--color-fg-inverse);
+
+  --color-border: var(--color-border-default);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-strong: var(--color-border-strong);
+
+  --color-accent: var(--color-accent-default);
+  --color-accent-emphasis: var(--color-accent-emphasis);
+  --color-accent-subtle: var(--color-accent-subtle);
+
+  --color-danger: var(--color-status-danger);
+  --color-success: var(--color-status-success);
+  --color-warning: var(--color-status-warning);
+  --color-info: var(--color-status-info);
+
+  --color-focus: var(--color-focus);
+}
+
+/* Base reset for theme-aware defaults. */
+@layer base {
+  html {
+    background-color: var(--color-bg-canvas);
+    color: var(--color-fg-default);
+    font-family: var(--font-family-sans);
+  }
+  *:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+}

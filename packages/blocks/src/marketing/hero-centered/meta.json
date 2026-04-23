@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../registry/schema/block.schema.json",
+  "name": "hero-centered",
+  "title": "Centered Hero",
+  "description": "A centered marketing hero with eyebrow, headline, description, and two CTAs.",
+  "category": "marketing",
+  "tags": ["hero", "landing", "cta"],
+  "status": "stable",
+  "preview": { "image": "/r/blocks/hero-centered/preview.png" },
+  "dependencies": [],
+  "registryDependencies": ["button"],
+  "files": [{ "path": "src/marketing/hero-centered/index.tsx", "type": "registry:block" }]
+}

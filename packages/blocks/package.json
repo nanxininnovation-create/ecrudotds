@@ -1,0 +1,34 @@
+{
+  "name": "@ecru/blocks",
+  "version": "0.0.0",
+  "description": "Ecru blocks — composed, opinionated sections for rapid app assembly.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    },
+    "./marketing/*": {
+      "types": "./src/marketing/*/index.tsx",
+      "import": "./src/marketing/*/index.tsx"
+    }
+  },
+  "files": ["src"],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ecru/core": "workspace:*",
+    "@ecru/utils": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@ecru/tsconfig": "workspace:*",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
+  }
+}

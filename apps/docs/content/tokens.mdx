@@ -1,0 +1,22 @@
+---
+title: Tokens
+description: DTCG-sourced, three-tier token architecture.
+---
+
+Ecru tokens live in `packages/tokens` as DTCG JSON and compile to CSS custom properties via Style Dictionary v4.
+
+## Three tiers
+
+1. **Primitive** — raw palettes (`color.ecru.500`), spacing (`space.4`), radius (`radius.lg`). Brand-agnostic. Exposed to Tailwind via `@theme`.
+2. **Semantic per-brand** — `color.bg.surface`, `color.fg.default`, `color.accent.emphasis`. Components consume these. Swappable per brand × mode.
+3. **Component** — only where a component needs its own knob (kept thin).
+
+## Runtime theming
+
+Every semantic token is a CSS variable. Swap brand + mode at runtime:
+
+```html
+<html data-brand="ecru" data-theme="dark">
+```
+
+No JS context. No rebuild. All utilities (`bg-surface`, `text-fg`, `border-border`) re-resolve automatically.

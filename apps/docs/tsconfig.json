@@ -1,0 +1,8 @@
+{
+  "extends": "@ecru/tsconfig/next.json",
+  "compilerOptions": {
+    "paths": { "@/*": ["./*"] }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".source"],
+  "exclude": ["node_modules"]
+}

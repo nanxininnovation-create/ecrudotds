@@ -1,0 +1,37 @@
+{
+  "$description": "Primitive color palettes — raw values, no semantics. Use OKLCH for perceptual uniformity.",
+  "color": {
+    "neutral": {
+      "0":   { "$type": "color", "$value": "oklch(1 0 0)" },
+      "50":  { "$type": "color", "$value": "oklch(0.985 0.001 106)" },
+      "100": { "$type": "color", "$value": "oklch(0.967 0.003 106)" },
+      "200": { "$type": "color", "$value": "oklch(0.923 0.006 106)" },
+      "300": { "$type": "color", "$value": "oklch(0.869 0.009 106)" },
+      "400": { "$type": "color", "$value": "oklch(0.708 0.013 106)" },
+      "500": { "$type": "color", "$value": "oklch(0.553 0.016 106)" },
+      "600": { "$type": "color", "$value": "oklch(0.446 0.016 106)" },
+      "700": { "$type": "color", "$value": "oklch(0.371 0.014 106)" },
+      "800": { "$type": "color", "$value": "oklch(0.269 0.010 106)" },
+      "900": { "$type": "color", "$value": "oklch(0.205 0.007 106)" },
+      "950": { "$type": "color", "$value": "oklch(0.145 0.004 106)" },
+      "1000":{ "$type": "color", "$value": "oklch(0 0 0)" }
+    },
+    "ecru": {
+      "50":  { "$type": "color", "$value": "oklch(0.982 0.015 85)" },
+      "100": { "$type": "color", "$value": "oklch(0.960 0.028 85)" },
+      "200": { "$type": "color", "$value": "oklch(0.915 0.048 85)" },
+      "300": { "$type": "color", "$value": "oklch(0.852 0.068 83)" },
+      "400": { "$type": "color", "$value": "oklch(0.760 0.088 80)" },
+      "500": { "$type": "color", "$value": "oklch(0.685 0.096 76)" },
+      "600": { "$type": "color", "$value": "oklch(0.585 0.090 72)" },
+      "700": { "$type": "color", "$value": "oklch(0.485 0.078 68)" },
+      "800": { "$type": "color", "$value": "oklch(0.390 0.060 64)" },
+      "900": { "$type": "color", "$value": "oklch(0.305 0.042 60)" },
+      "950": { "$type": "color", "$value": "oklch(0.220 0.028 56)" }
+    },
+    "red":   { "500": { "$type": "color", "$value": "oklch(0.628 0.227 26)" }, "600": { "$type": "color", "$value": "oklch(0.555 0.208 26)" } },
+    "green": { "500": { "$type": "color", "$value": "oklch(0.684 0.172 152)" }, "600": { "$type": "color", "$value": "oklch(0.602 0.158 152)" } },
+    "amber": { "500": { "$type": "color", "$value": "oklch(0.789 0.162 70)" }, "600": { "$type": "color", "$value": "oklch(0.702 0.156 65)" } },
+    "blue":  { "500": { "$type": "color", "$value": "oklch(0.623 0.190 259)" }, "600": { "$type": "color", "$value": "oklch(0.554 0.178 259)" } }
+  }
+}

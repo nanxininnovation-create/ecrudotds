@@ -1,0 +1,29 @@
+{
+  "name": "ecru-ds",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Ecru Design System — AI-ready, Tailwind v4, multi-brand",
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "storybook": "turbo run storybook --filter=@ecru/storybook",
+    "docs": "turbo run dev --filter=@ecru/docs",
+    "tokens:build": "turbo run build --filter=@ecru/tokens",
+    "registry:build": "turbo run build --filter=@ecru/registry",
+    "chromatic": "turbo run chromatic --filter=@ecru/storybook",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "turbo": "^2.3.0",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

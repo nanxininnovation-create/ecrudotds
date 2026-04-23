@@ -1,0 +1,32 @@
+{
+  "$schema": "../../../registry/schema/component.schema.json",
+  "name": "button",
+  "title": "Button",
+  "description": "Trigger an action or navigate. Supports six variants and four sizes.",
+  "category": "form",
+  "tags": ["action", "cta", "form"],
+  "status": "stable",
+  "a11y": [
+    "Interactive element must have a discernible label (text or aria-label).",
+    "Icon-only buttons require aria-label.",
+    "Disabled buttons are removed from the tab order — prefer aria-disabled for async states."
+  ],
+  "usage": {
+    "do": [
+      "Use `primary` for the single most important action on a surface.",
+      "Pair `secondary` with `primary` when two actions coexist."
+    ],
+    "dont": [
+      "Don't stack more than two buttons of the same variant side-by-side.",
+      "Don't use `link` variant inside dense tables — use a text link instead."
+    ]
+  },
+  "examples": [
+    { "name": "default", "code": "<Button>Continue</Button>" },
+    { "name": "with-icon", "code": "<Button><PlusIcon />Create</Button>" },
+    { "name": "as-link", "code": "<Button asChild><a href=\"/signup\">Sign up</a></Button>" }
+  ],
+  "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+  "registryDependencies": [],
+  "files": [{ "path": "src/components/button.tsx", "type": "registry:ui" }]
+}

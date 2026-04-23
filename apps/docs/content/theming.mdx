@@ -1,0 +1,20 @@
+---
+title: Theming
+description: Runtime brand + mode switching via data attributes.
+---
+
+Ecru themes are just CSS custom property sets scoped to `[data-brand][data-theme]` selectors.
+
+## Adding a brand
+
+1. Create `packages/tokens/src/brands/<name>/light.json` and `dark.json`.
+2. Reference primitives via DTCG aliases: `"$value": "{color.ecru.500}"`.
+3. Run `pnpm tokens:build` — a new `dist/brands/<name>.css` is emitted.
+4. Import it in your app if the brand is not the default.
+
+## Switching at runtime
+
+```tsx
+document.documentElement.setAttribute("data-brand", "acme");
+document.documentElement.setAttribute("data-theme", "dark");
+```

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://www.chromatic.com/config-file.schema.json",
+  "projectId": "TODO-set-via-env",
+  "storybookBuildDir": "storybook-static",
+  "onlyChanged": true,
+  "autoAcceptChanges": "main"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@ecru/tokens",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Ecru design tokens (DTCG) + Style Dictionary build pipeline",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./theme.css": "./dist/theme.css",
+    "./brands/*.css": "./dist/brands/*.css",
+    "./json": "./dist/tokens.json"
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "dev": "node ./scripts/build.mjs --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@ecru/tsconfig": "workspace:*",
+    "style-dictionary": "^4.2.0",
+    "typescript": "^5.6.3"
+  }
+}

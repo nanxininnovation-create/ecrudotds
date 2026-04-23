@@ -1,0 +1,19 @@
+---
+title: Introduction
+description: Overview of the Ecru Design System.
+---
+
+Ecru is an AI-ready, multi-brand design system built on Tailwind CSS v4.
+
+## Principles
+
+- **Owned, not rented.** Components are seeded from shadcn/ui and fully owned — no runtime dependency on a component library.
+- **Themeable at runtime.** Swap brand and mode by setting `data-brand` and `data-theme` on `<html>`. No rebuild.
+- **AI-ready.** Every component ships a `meta.json` with usage, a11y, and examples, and is installable via the shadcn CLI from our registry.
+- **Blocks speed apps.** Atomic components (core) + composed blocks (blocks) cover from button to dashboard shell.
+
+## Install (via shadcn CLI)
+
+```bash
+npx shadcn add https://docs.ecru.example.com/r/button.json
+```

@@ -1,0 +1,36 @@
+{
+  "name": "@ecru/storybook",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build": "storybook build",
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ecru/blocks": "workspace:*",
+    "@ecru/core": "workspace:*",
+    "@ecru/tokens": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
+    "@ecru/tsconfig": "workspace:*",
+    "@storybook/addon-a11y": "^9.0.0",
+    "@storybook/addon-docs": "^9.0.0",
+    "@storybook/addon-themes": "^9.0.0",
+    "@storybook/react-vite": "^9.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "chromatic": "^11.20.2",
+    "storybook": "^9.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

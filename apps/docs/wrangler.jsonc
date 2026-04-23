@@ -1,0 +1,13 @@
+// Webflow Cloud / Cloudflare Workers deploy config (via @opennextjs/cloudflare).
+// Set WEBFLOW_CLOUD_PROJECT and link in Webflow dashboard, or run locally with `wrangler dev`.
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "ecru-docs",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  }
+}

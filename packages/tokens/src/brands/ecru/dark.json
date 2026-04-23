@@ -1,0 +1,36 @@
+{
+  "$description": "Ecru brand — dark theme semantic tokens.",
+  "color": {
+    "bg": {
+      "canvas":   { "$type": "color", "$value": "{color.neutral.950}" },
+      "surface":  { "$type": "color", "$value": "{color.neutral.900}" },
+      "subtle":   { "$type": "color", "$value": "{color.neutral.800}" },
+      "muted":    { "$type": "color", "$value": "{color.neutral.700}" },
+      "inverse":  { "$type": "color", "$value": "{color.neutral.50}" }
+    },
+    "fg": {
+      "default":  { "$type": "color", "$value": "{color.neutral.50}" },
+      "muted":    { "$type": "color", "$value": "{color.neutral.300}" },
+      "subtle":   { "$type": "color", "$value": "{color.neutral.400}" },
+      "onAccent": { "$type": "color", "$value": "{color.neutral.950}" },
+      "inverse":  { "$type": "color", "$value": "{color.neutral.950}" }
+    },
+    "border": {
+      "default": { "$type": "color", "$value": "{color.neutral.800}" },
+      "subtle":  { "$type": "color", "$value": "{color.neutral.900}" },
+      "strong":  { "$type": "color", "$value": "{color.neutral.700}" }
+    },
+    "accent": {
+      "default":  { "$type": "color", "$value": "{color.ecru.400}" },
+      "emphasis": { "$type": "color", "$value": "{color.ecru.300}" },
+      "subtle":   { "$type": "color", "$value": "{color.ecru.900}" }
+    },
+    "status": {
+      "danger":  { "$type": "color", "$value": "{color.red.500}" },
+      "success": { "$type": "color", "$value": "{color.green.500}" },
+      "warning": { "$type": "color", "$value": "{color.amber.500}" },
+      "info":    { "$type": "color", "$value": "{color.blue.500}" }
+    },
+    "focus": { "$type": "color", "$value": "{color.ecru.400}" }
+  }
+}
