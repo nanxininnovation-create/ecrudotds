@@ -1,4 +1,10 @@
 {
   "extends": "@ecru/tsconfig/react-lib.json",
-  "include": [".storybook", "src"]
+  "include": [
+    ".storybook",
+    "../../packages/core/src/**/*.tsx",
+    "../../packages/core/src/**/*.ts",
+    "../../packages/blocks/src/**/*.tsx",
+    "../../packages/blocks/src/**/*.ts"
+  ]
 }

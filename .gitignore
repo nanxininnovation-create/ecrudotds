@@ -18,3 +18,4 @@ coverage
 packages/tokens/dist
 packages/registry/public
 apps/docs/.source
+apps/docs/public/r

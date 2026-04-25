@@ -1,9 +1,19 @@
 /* Ecru core styles — imports Tailwind + generated tokens.
- * Apps should import this file once. Monorepo @source globs live here so
- * Tailwind v4 picks up every component without each app repeating them.
+ *
+ * After this file is imported, Tailwind v4 generates utility classes for
+ * every token in dist/theme.css. Semantic utilities include:
+ *   bg-bg-canvas, bg-bg-surface, bg-bg-subtle, bg-bg-muted, bg-bg-inverse
+ *   text-fg-default, text-fg-muted, text-fg-subtle, text-fg-on-accent, text-fg-inverse
+ *   border-border-default, border-border-subtle, border-border-strong
+ *   bg-accent-default, bg-accent-emphasis, bg-accent-subtle
+ *   bg-status-danger, bg-status-success, bg-status-warning, bg-status-info
+ *   ring-focus
+ *
+ * Plus shorter aliases (bg-surface, text-fg, border-border, bg-accent, ...) below.
  */
 
 @import "tailwindcss";
+@import "tw-animate-css";
 @import "@ecru/tokens/theme.css";
 
 /* Tell Tailwind v4 where to find utility usages across the workspace.
@@ -12,9 +22,9 @@
 @source "../../../core/src/**/*.{ts,tsx}";
 @source "../../../blocks/src/**/*.{ts,tsx}";
 
-/* Map Tailwind's semantic color utilities to our brand CSS variables.
- * After this, utilities like `bg-surface`, `text-fg`, `border-border`
- * resolve to the active brand+mode tokens. */
+/* Short aliases — keeps component class strings readable.
+ * `@theme inline` lets these reference other CSS variables without
+ * Tailwind freezing them at build time. */
 @theme inline {
   --color-canvas: var(--color-bg-canvas);
   --color-surface: var(--color-bg-surface);
@@ -23,25 +33,15 @@
   --color-inverse: var(--color-bg-inverse);
 
   --color-fg: var(--color-fg-default);
-  --color-fg-muted: var(--color-fg-muted);
-  --color-fg-subtle: var(--color-fg-subtle);
-  --color-fg-on-accent: var(--color-fg-onAccent);
-  --color-fg-inverse: var(--color-fg-inverse);
 
   --color-border: var(--color-border-default);
-  --color-border-subtle: var(--color-border-subtle);
-  --color-border-strong: var(--color-border-strong);
 
   --color-accent: var(--color-accent-default);
-  --color-accent-emphasis: var(--color-accent-emphasis);
-  --color-accent-subtle: var(--color-accent-subtle);
 
   --color-danger: var(--color-status-danger);
   --color-success: var(--color-status-success);
   --color-warning: var(--color-status-warning);
   --color-info: var(--color-status-info);
-
-  --color-focus: var(--color-focus);
 }
 
 /* Base reset for theme-aware defaults. */
